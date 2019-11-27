@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="./style/game.css">
+    <meta charset="UTF-8">
+    <title>Invaders</title>
+</head>
+<body>
+<div id="wapper">
+
+    <div id="game-container" class="box">
+        <div id="dashboard-container">
+            <span class="score-text">Score:</span>
+            <span id="score" class="score-text">0000</span>
+        </div>
+
+        <input type="image" id="game-start" alt="Start the game"
+               src="http://pixelartmaker.com/art/805d8a5b6ce043a.png"
+               onclick="game.start()">
+    </div>
+
+
+</div>
+
+<script src="./scripts/constants.js"></script>
+<script src="./scripts/collusion-detector.js"></script>
+<script src="./scripts/game-objects-factory.js"></script>
+<script src="./scripts/score-board.js"></script>
+<script src="./scripts/renderer.js"></script>
+<script src="./scripts/game.js"></script>
+
+<script>
+    const {Game} = window;
+    const game = new Game('#game-container', 1024, 748);
+</script>
+</body>
+</html>
