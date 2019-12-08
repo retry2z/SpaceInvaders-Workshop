@@ -31,8 +31,8 @@
     background-image: url("https://cdn.spacetelescope.org/archives/images/screen/heic1304c.jpg");
     height:100%;
     width:100%;
-    animation:mymove 15s linear infinite;
-    background-size: 100% 110%;
+    animation:mymove 12s linear infinite;
+    background-size: 100% 200%;
 }
 @keyframes mymove {
     from {

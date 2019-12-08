@@ -173,7 +173,7 @@
             if (this.bulletProfil) {
                 const {top, left} = this.playerProfil;
                 const bullet = this.GameObjectFactory.createBullet(top, left);
-                if (this.bullets.length >= 2) {
+                if (this.bullets.length >= 1) {
                     return;
                 }
                 this.bullets.push(bullet);
