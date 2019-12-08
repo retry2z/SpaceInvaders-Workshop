@@ -27,7 +27,7 @@
 
 
         bossChecker: () => {
-            if (scope.score > 0 && scope.score < 5) {
+            if (scope.score > 4 && scope.score < 10) {
                 game.bossEvent = true;
             }
         },

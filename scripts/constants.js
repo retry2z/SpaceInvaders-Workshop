@@ -9,7 +9,7 @@
         BULLET: {
             WIDTH: 20,
             HEIGHT: 30,
-            SPEED: -9.3,
+            SPEED: -10.1,
             DAMAGE: 50,
         },
         ENEMY: {
