@@ -1,0 +1,22 @@
+{
+  "name": "workspace_invaders",
+  "version": "1.0.0",
+  "description": "http://qwer.my.contact.bg/",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/retry2z/Workspace_Invaders.git"
+  },
+  "author": "retry2z",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/retry2z/Workspace_Invaders/issues"
+  },
+  "homepage": "https://github.com/retry2z/Workspace_Invaders#readme",
+  "dependencies": {
+    "bootstrap": "^4.4.1"
+  }
+}

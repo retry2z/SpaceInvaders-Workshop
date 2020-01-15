@@ -41,8 +41,9 @@
 
     class Game {
         constructor(selector, width, height) {
-            this.gameContainer = document.querySelector(selector);
+            this.gameContainer = document.getElementById('game-container');
             this.startButton = document.getElementById('game-start');
+            this.gameWapper = document.getElementById('wapper');
             this.canvas = setupCanvas(this.gameContainer, width, height);
             this.bounds = {
                 width,
@@ -219,11 +220,11 @@
                 return;
             }
             this.started = true;
-            this._gameLoop();
-            this.gameContainer.focus();
+            this._gameLoop();            
             this.startButton.blur();
-            this.gameContainer.setAttribute('class', 'box view');
-            this.startButton.style.display = "none";
+            this.gameWapper.focus();
+            this.gameContainer.setAttribute('class', 'view');
+            this.gameContainer.style.display = "block";
         }
 
         _attachGameEvents() {

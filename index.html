@@ -1,37 +1,66 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <link rel="stylesheet" href="./style/game.css">
     <meta charset="UTF-8">
-    <title>Invaders</title>
+    <link rel="stylesheet" href="style/game.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-reboot.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap-grid.min.css" />
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css" />
+    <title>retry2z Invaders</title>
 </head>
+
 <body>
-<div id="wapper">
+    <div id="wapper" class="container bg-dark text-white rounded">
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
 
-    <div id="game-container" class="box">
-        <div id="dashboard-container">
-            <span class="score-text">Score:</span>
-            <span id="score" class="score-text">0000</span>
-        </div>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                   
 
-        <input type="image" id="game-start" alt="Start the game"
-               src="http://pixelartmaker.com/art/805d8a5b6ce043a.png"
-               onclick="game.start()">
+                    <li class="nav-item">
+                        <button type="button" id="game-start" class="btn btn-primary" onclick="game.start()">Start</button>
+                    </li>
+                </ul>
+                <div class="form-group">
+                    <form class="form-inline my-2 my-lg-0">
+                        <label for="score">Score:</label>
+                        <span id="score" class="score-text ml-2">0000</span>                        
+                    </form>
+                </div>
+            </div>
+        </nav>
+
+        <main>
+           <div id="game-container">
+           </div>
+        </main>
+
+
+
+
     </div>
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
 
+    <script src="./scripts/constants.js"></script>
+    <script src="./scripts/collusion-detector.js"></script>
+    <script src="./scripts/game-objects-factory.js"></script>
+    <script src="./scripts/score-board.js"></script>
+    <script src="./scripts/renderer.js"></script>
+    <script src="./scripts/game.js"></script>
 
-</div>
-
-<script src="./scripts/constants.js"></script>
-<script src="./scripts/collusion-detector.js"></script>
-<script src="./scripts/game-objects-factory.js"></script>
-<script src="./scripts/score-board.js"></script>
-<script src="./scripts/renderer.js"></script>
-<script src="./scripts/game.js"></script>
-
-<script>
-    const {Game} = window;
-    const game = new Game('#game-container', 1024, 748);
-</script>
+    <script>
+        const { Game } = window;
+        const game = new Game('#game-container', 1024, 748);
+    </script>
 </body>
+
 </html>
