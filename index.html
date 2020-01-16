@@ -13,27 +13,36 @@
 <body>
     <div id="wapper" class="container bg-dark text-white rounded">
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
 
             <div class="collapse navbar-collapse" id="navbarSupportedContent">
                 <ul class="navbar-nav mr-auto">
-                   
 
-                    <li class="nav-item">
-                        <button type="button" id="game-start" class="btn btn-primary" onclick="game.start()">Start</button>
+                    <li class="nav-item col-12 mr-2">
+                        <button type="button" id="game-start" class="btn btn-primary"
+                            onclick="game.start()">Start</button>
                     </li>
-                </ul>
-                <div class="form-group">
-                    <form class="form-inline my-2 my-lg-0">
+
+                    <li class="nav-item col-12 mr-2">
+                        <label for="player">Player:</label>
+                        <span id="player" class="ml-2">000</span>
+                    </li>
+
+                    <li class="nav-item col-12 mr-2">
                         <label for="score">Score:</label>
-                        <span id="score" class="score-text ml-2">0000</span>                        
-                    </form>
-                </div>
+                        <span id="score" class="score-text ml-2 text-info">0000</span>
+                    </li>
+
+                </ul>
             </div>
         </nav>
 
         <main>
-           <div id="game-container">
-           </div>
+            <div id="game-container">
+            </div>
         </main>
 
 
