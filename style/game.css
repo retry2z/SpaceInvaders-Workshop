@@ -22,7 +22,10 @@
 }
 
 
-
+#game-container {
+    width: 900px;
+    height: 568px;
+}
 
 
 

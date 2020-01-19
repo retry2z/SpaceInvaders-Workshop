@@ -35,19 +35,25 @@
                         <label for="score">Score:</label>
                         <span id="score" class="score-text ml-2 text-info">0000</span>
                     </li>
-
                 </ul>
             </div>
         </nav>
 
-        <main>
-            <div id="game-container">
+        <main class="container">
+            <div class="row">
+                <div id="game-container" cla pr-1">
+                </div>
+                <div id="Aside" class="col-1">
+                    <h4>Im here</h4>
+                </div>
             </div>
         </main>
 
 
 
-
+        <footer class="container text-white text-center">
+            <h4>No copyright</h4>
+        </footer>
     </div>
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
         integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
@@ -68,7 +74,10 @@
 
     <script>
         const { Game } = window;
-        const game = new Game('#game-container', 1024, 748);
+        const gameElement = document.getElementById('game-container');
+        const gameWidth = gameElement.offsetWidth;
+        const gameHeight = gameElement.offsetHeight;
+        const game = new Game(gameElement, gameWidth, gameHeight);
     </script>
 </body>
 

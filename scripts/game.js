@@ -41,7 +41,7 @@
 
     class Game {
         constructor(selector, width, height) {
-            this.gameContainer = document.getElementById('game-container');
+            this.gameContainer = selector;
             this.startButton = document.getElementById('game-start');
             this.gameWapper = document.getElementById('wapper');
             this.canvas = setupCanvas(this.gameContainer, width, height);
